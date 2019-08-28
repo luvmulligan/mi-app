@@ -12,3 +12,61 @@
     top: 12px;
     right: 8px;
   } 
+
+  #heroCard{
+    height: 170px;
+    margin: 5px;
+
+  }
+  #heroList{
+    margin: 22px;
+
+
+  }
+  .title{
+    margin: 31px;
+  }
+
+  .btn-info {
+           background-color:#401F7C;
+           border-color: #401F7C;
+           
+        }
+  a{
+    color: whitesmoke; 
+  }
+
+  #selectCard{
+    position: sticky;
+  }
+
+  
+  #rowContainer{
+    position: relative; 
+  }
+
+#likeButton{
+  margin-bottom: 15px;
+           margin-left: -13px;
+}
+
+
+.fixed {
+    position: fixed;
+}
+
+@media only screen and (max-width: 600px) {
+  .fixed {
+    position: static;
+  }
+}
+
+.more-margin{
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .more-margin {
+    margin-left: 0px;
+  }
+}

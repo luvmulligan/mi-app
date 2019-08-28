@@ -1,13 +1,18 @@
-<div class="row">
-
-    <div class="col-md-3 card" *ngFor="let hero of heros; let index = index" (click)="selectHero(hero)"
-        [ngClass]="{'active': hero == selectedHero, disable: hero.disable==true }">
+<h1 class="title">Hero Dashboard</h1>
+<div class="row" id="heroDashboard">
+    <div class="col-md-4 card " *ngFor="let hero of heros; let index = index" (click)="selectHero(hero)"
+        [ngClass]="{'active': hero == selectedHero, disable: hero.disable==true }" id="heroCard">
 
         <span class="id"> {{hero.id}}</span>
-        {{hero.name}}
+        <h3>{{hero.name}}</h3>
+
         <p class="id">{{hero.description}}</p>
-        <span class="badge">{{hero.likes}}</span>
-        <button class="btn btn-sm btn-primary" (click)="onClickGoto(hero.id)">EDIT</button>
+        <span class="badge">likes {{hero.likes}}</span>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-info btn-sm" (click)="onClickGoto(hero.id)">EDIT</button>
+            </div>
+        </div>
     </div>
 
 </div>
