@@ -1,16 +1,16 @@
-import { Component, OnInit, IterableChangeRecord, ɵCompiler_compileModuleSync__POST_R3__ } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Hero } from 'src/app/models/hero.model';
 import { HeroService } from 'src/app/services/hero.service';
-
+import { Routes, RouterModule, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home-list',
-  templateUrl: './home-list.component.html',
-  styleUrls: ['./home-list.component.sass']
+  selector: 'app-dash-work',
+  templateUrl: './dash-work.component.html',
+  styleUrls: ['./dash-work.component.scss']
 })
-export class HomeListComponent implements OnInit {
+export class DashWorkComponent implements OnInit {
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService, private router: Router) { }
 
   ngOnInit() {
     //this.heros = this.heroService.getHeros();
@@ -27,8 +27,8 @@ export class HomeListComponent implements OnInit {
       }
 
     );
-  }
 
+  }
 
   private selectedHero: Hero;
 
@@ -44,10 +44,12 @@ export class HomeListComponent implements OnInit {
 
   private heros: Hero[];
 
-
-
-
-
+  onClickGoto(id) {
+    console.log("edit/" + id);
+    this.router.navigateByUrl("edit/" + id);
+  }
 
 
 }
+
+
